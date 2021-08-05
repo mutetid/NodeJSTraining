@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="hsidebar">
+            <h2>DAT</h2>
+            <h4>One million Farmer Platform</h4>
+        </div>
+        <div class="hmain">
+            <div>
+                <h4>Category</h4>
+                <h4>Category</h4>
+                <h4>Category</h4>
+                <h4>Category</h4>
+            </div>
+            <div id="icon"></div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="sidebar"></div>
+        <div class="content">
+            <div class="topbar">
+                <div>
+                    <h4>Data</h4>
+                    <h4>Data</h4>
+                    <h4>Data</h4>
+                    <h4>Data</h4>
+                </div>
+
+                <div>
+                    <h5>farmers</h5>
+                    <h5>farmers</h5>
+                    <h5>farmers</h5>
+                    <h5>farmers</h5>
+                </div>
+            </div>
+            <div class="maparea">
+                <div id="map"></div>
+                <div class="rightsidebar"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var map = L.map('map').setView([-1.3030869, 36.8054953], 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker([-1.3030869, 36.8054953]).addTo(map)
+                .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                .openPopup();
+    </script>
+</body>
+
+</html>
